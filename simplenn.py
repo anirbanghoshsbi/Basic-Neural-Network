@@ -22,11 +22,12 @@ def d_sigmoid(x):
 
 # loss formula there are many  but here we wouls focus on mean squared error
 '''
-If yhat predictions generated from a sample of n data points on all variables, and  Y is the vector of observed values of the variable being predicted, then the within-sample MSE of the predictor is computed as
-
-MSE = 1/n*(sum(yi-yihat)**2
-
-hence the MSE is the mean of the square of the difference between original observed value and the prediction of the ML algorithm. taking square of the difference between the actual and the predicted value penalizes the network for error in quadratic term or more heavily, thus forcing to the algorithm to be more accurate in its predicitions before it is used for real life purpose and can be thought of like and regularizer preventing overfitting.'''
+If yhat predictions generated from a sample of n data points on all variables, and  Y is the vector of observed values 
+of the variable being predicted, then the within-sample MSE of the predictor is computed asMSE = 1/n*(sum(yi-yihat)**2
+hence the MSE is the mean of the square of the difference between original observed value and the prediction of the ML
+algorithm. taking square of the difference between the actual and the predicted value penalizes the network for error 
+in quadratic term or more heavily, thus forcing to the algorithm to be more accurate in its predicitions before it is 
+used for real life purpose and can be thought of like and regularizer preventing overfitting.'''
 
 MSE =0.0
 
@@ -44,7 +45,7 @@ the output y is of the shape y.shape= (4,1)'''
 input_dims = 3 # equal to the number of input features
 output_dims = 1 # equal to the output of the NN.
 W1 = np.random.randn(input_dims , output_dims)  
-b1 = np.zeros((1,output_dims)) 
+# we neglect the bias for now however bias can be added by bias = np.zeors((1, output_dims)) 
 # Run the Program
 
 for i in np.arange(args['epochs']):
